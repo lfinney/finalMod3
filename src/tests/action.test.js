@@ -1,5 +1,5 @@
 import * as actions from '../actions';
-import housesMock from './mockData/housesMock'
+import housesMock from './mockData/housesMock';
 
 describe('actions', () => {
 
