@@ -41,7 +41,10 @@ class Card extends Component {
         <div>{weapons}</div>
         <h3>{house.words}</h3>
         {this.state.showMembers &&
-        <div className="flex-data">{members}</div>
+        <div>
+          <h3>Sworn Members</h3>
+          <div className="flex-data members">{members}</div>
+        </div>
         }
       </div>
     );
