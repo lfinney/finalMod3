@@ -21,7 +21,7 @@ const fetchSwornMembers = (dataToParse) => {
       words: house.words
     };
 
-    house.swornMembers.map( member => {
+    const members = house.swornMembers.map( member => {
       fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
         body: JSON.stringify( {url: member} ),
@@ -29,8 +29,9 @@ const fetchSwornMembers = (dataToParse) => {
           'Content-Type': 'application/json'
         }
       })
-      .then(res => res.json())
-      .then(res => console.log(res));
+        .then(res => res.json())
+        .then(person => console.log(person.name));
     });
+    console.log(members);
   });
 };
