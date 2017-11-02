@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
+import { fetchHouseData } from '../../utilities/databaseHelper';
 import { connect } from 'react-redux';
-import { fakeAction } from '../../actions';
 class App extends Component {
 
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to Westeros</h2>
           <button onClick={() => {
-            this.props.fakeAction();
+            this.props.fetchData();
             alert(this.props.fake);
           }}> FAKE ACTION</button>
         </div>
@@ -29,8 +29,12 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
+const mapStateToProps = ({ store }) => ({
+  store
 });
+
+const mapDispatchToProps = dispatch => ({
+  fetchData: () => dispatch(fetchHouseData())
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
