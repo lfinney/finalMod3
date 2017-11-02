@@ -2,5 +2,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #555;
-  text-shadow: 0px 0px 21px #999;
+  text-shadow: 0px 0px 21px #1c1c1c;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  margin: 15px;
+  background-color: #737373;
+  border-radius: 15px;
+  border: 3px solid #bebebe;
 }

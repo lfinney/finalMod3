@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = ({ house }) => {
-  const seats = house.seats.map( seat => <p>{seat}</p>)
-  const titles = house.titles.map( title => <p>{title}</p>)
-  const weapons = house.ancestralWeapons.map( weapon => <p>{weapon}</p>)
-  console.log(house);
+  const seats = house.seats.map( seat =>
+    <p key={seat} >{seat}</p>);
+  const titles = house.titles.map( title =>
+    <p key={title} >{title}</p>);
+  const weapons = house.ancestralWeapons.map( weapon =>
+    <p key={weapon} >{weapon}</p>);
+
   return (
-    <div>
+    <div className="card">
       <h2>{house.name}</h2>
       <p>{house.founded}</p>
       <h3>House Seats</h3>
@@ -24,7 +27,7 @@ const Card = ({ house }) => {
 };
 
 Card.propTypes = {
-  housesInTheGame: PropTypes.arrayOf(PropTypes.object)
+  house: PropTypes.object
 };
 
 export default Card;
