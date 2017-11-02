@@ -8,10 +8,8 @@ describe('reducers', () => {
       type: 'FETCH_DATA',
       houses:housesMock
     };
-    
     const expectation = action.houses;
 
     expect(reducers.housesInTheGame([], action)).toEqual(expectation);
-
-  })
-})
+  });
+});
