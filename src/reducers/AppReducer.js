@@ -7,3 +7,13 @@ export const housesInTheGame = ( state = [], action) => {
     return state;
   }
 };
+
+export const showActiveMembers = ( state = false, action) => {
+  switch (action.type) {
+  case "TOGGLE_ACTIVE_MEMBERS":
+    return action.bool;
+
+  default:
+    return state;
+  }
+};

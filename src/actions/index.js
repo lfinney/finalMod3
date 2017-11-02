@@ -4,3 +4,10 @@ export const fetchData = (houses) => {
     houses
   };
 };
+
+export const toggleActiveMembers = (bool) => {
+  return {
+    type: 'TOGGLE_ACTIVE_MEMBERS',
+    bool
+  };
+};

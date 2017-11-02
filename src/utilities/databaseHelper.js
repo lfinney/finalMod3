@@ -39,5 +39,4 @@ const fetchSwornMembers = (dataToParse) => {
   });
 
   return Promise.all(completeHouses).then(houseData => houseData);
-
 };
