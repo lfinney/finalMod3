@@ -14,10 +14,17 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
           <button onClick={() => {
             this.props.fetchData();
-            alert(this.props.fake);
+            // alert(this.props.fake);
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          { this.props.housesInTheGame ?
+            <CardDirectory />
+            :
+            <div className="loading">
+              <img alt="running dire wolf" src={ require('../../../wolf.gif')}/>
+            </div>
+          }
         </div>
       </div>
     );
@@ -30,7 +37,7 @@ App.propTypes = {
 };
 
 const mapStateToProps = ({ store }) => ({
-  store
+  housesInTheGame: store.housesInTheGame
 });
 
 const mapDispatchToProps = dispatch => ({
