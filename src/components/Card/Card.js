@@ -10,7 +10,6 @@ class Card extends Component {
   }
 
   toggleActiveMembers() {
-    console.log('whodis');
     this.setState({
       showMembers: !this.state.showMembers
     });

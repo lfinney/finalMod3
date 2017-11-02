@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { fetchHouseData } from '../../utilities/databaseHelper';
-import { toggleActiveMembers } from '../../actions';
 import { connect } from 'react-redux';
 import CardDirectory from '../CardDirectory/CardDirectory';
 
@@ -23,9 +22,7 @@ class App extends Component {
         <div className='Display-info'>
           { this.props.housesInTheGame.length > 0 ?
             <CardDirectory
-              housesInTheGame={this.props.housesInTheGame}
-              showActiveMembers={this.props.showActiveMembers}
-              toggleActiveMembers={this.props.toggleActiveMembers}/>
+              housesInTheGame={this.props.housesInTheGame} />
             :
             <div className="loading">
               <img
@@ -41,19 +38,15 @@ class App extends Component {
 
 App.propTypes = {
   housesInTheGame: PropTypes.arrayOf(PropTypes.object),
-  fetchData: PropTypes.func,
-  showActiveMembers: PropTypes.bool,
-  toggleActiveMembers: PropTypes.func
+  fetchData: PropTypes.func
 };
 
 const mapStateToProps = ( store ) => ({
-  housesInTheGame: store.housesInTheGame,
-  showActiveMembers: store.showActiveMembers
+  housesInTheGame: store.housesInTheGame
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchData: () => dispatch(fetchHouseData()),
-  toggleActiveMembers: (bool) => dispatch(toggleActiveMembers(bool))
+  fetchData: () => dispatch(fetchHouseData())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

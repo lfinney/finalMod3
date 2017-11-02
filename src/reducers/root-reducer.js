@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-import { housesInTheGame, showActiveMembers } from './AppReducer';
+import { housesInTheGame } from './AppReducer';
 
 const rootReducer = combineReducers({
-  housesInTheGame,
-  showActiveMembers
+  housesInTheGame
 });
 
 
