@@ -21,10 +21,13 @@ class App extends Component {
         </div>
         <div className='Display-info'>
           { this.props.housesInTheGame.length > 0 ?
-            <CardDirectory />
+            <CardDirectory
+              housesInTheGame={this.props.housesInTheGame}/>
             :
             <div className="loading">
-              <img alt="running dire wolf" src={ require('../../assets/wolf.gif')}/>
+              <img
+                alt="running dire wolf"
+                src={ require('../../assets/wolf.gif')}/>
             </div>
           }
         </div>
@@ -34,8 +37,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  housesInTheGame: PropTypes.arrayOf(PropTypes.object),
+  fetchData: PropTypes.func
 };
 
 const mapStateToProps = ( store ) => ({
