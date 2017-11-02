@@ -16,22 +16,23 @@ describe('App', () => {
   // const mockFunc = jest.fn();
   const store = mockStore(initialState);
 
-  it('should render component', () => {
-    const wrapper = shallow(
-      <App store={store} />);
-
-      console.log(wrapper.debug());
-    expect(wrapper.length).toEqual(1);
-  });
-
-  it('should make an api call when mounted', () => {
+  beforeEach( () => {
     fetchMock.get(`http://localhost:3001/api/v1/houses`, {
       status: 200,
       body: housesMock
     });
-    
-    const wrapper = mount(
-      <App store={store} />);
-      console.log(wrapper.debug());
-  })
+  });
+
+  it('should render component', () => {
+    const wrapper = shallow( <App store={store} />);
+
+    expect(wrapper.length).toEqual(1);
+  });
+
+  it('should successfully mount with a loading screen as default', () => {
+    const wrapper = mount( <App store={store} />);
+
+    expect(wrapper.length).toEqual(1);
+    expect(wrapper.find('.loading').length).toEqual(1);
+  });
 });

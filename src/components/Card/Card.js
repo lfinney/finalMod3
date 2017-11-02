@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const Card = ({ house }) => {
 
-  console.log(house);
   const seats = house.seats.map( seat =>
     <p key={seat} >{seat}</p>);
   const titles = house.titles.map( title =>
