@@ -22,7 +22,7 @@ const fetchSwornMembers = (dataToParse) => {
     };
 
     const members = house.swornMembers.map( member => {
-      fetch('http://localhost:3001/api/v1/character', {
+      return fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
         body: JSON.stringify( {url: member} ),
         headers: {
@@ -30,8 +30,14 @@ const fetchSwornMembers = (dataToParse) => {
         }
       })
         .then(res => res.json())
-        .then(person => console.log(person.name));
+        .then(person => person.name);
     });
-    console.log(members);
+
+    return Promise.all(members).then( squad =>
+      Object.assign(incompleteHouse, {swornMembers: squad})
+    );
   });
+
+  return Promise.all(completeHouses).then(houseData => houseData);
+
 };
