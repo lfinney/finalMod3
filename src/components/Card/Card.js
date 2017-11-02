@@ -18,13 +18,13 @@ class Card extends Component {
   render() {
     const { house } = this.props;
     const seats = this.props.house.seats.map( seat =>
-      <p key={seat} >{seat}</p>);
+      <span key={seat} >{seat}</span>);
     const titles = house.titles.map( title =>
-      <p key={title} >{title}</p>);
+      <p className="flex-me" key={title} >{title}</p>);
     const weapons = house.ancestralWeapons.map( weapon =>
       <p key={weapon} >{weapon}</p>);
     const members = house.swornMembers.map( (member, index) =>
-      <p key={index}>{member}</p> );
+      <p className="flex-me" key={index}>{member}</p> );
 
     return (
       <div
@@ -32,17 +32,16 @@ class Card extends Component {
         onClick={() => this.toggleActiveMembers()}>
         <h2>{house.name}</h2>
         <p>{house.founded}</p>
-        <h3>House Seats</h3>
-        <h3>{seats}</h3>
+        <h3>House Seats: {seats}</h3>
         <h3>House Titles</h3>
-        <div>{titles}</div>
+        <div className="flex-data">{titles}</div>
         <h3>Coat of Arms</h3>
         <p>{house.coatOfArms}</p>
         <h3>Ancestral Weapons</h3>
         <div>{weapons}</div>
         <h3>{house.words}</h3>
         {this.state.showMembers &&
-        <div>{members}</div>
+        <div className="flex-data">{members}</div>
         }
       </div>
     );
