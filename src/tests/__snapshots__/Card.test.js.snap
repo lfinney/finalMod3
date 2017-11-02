@@ -17,6 +17,9 @@ ShallowWrapper {
             "seats": Array [
               "Heart's Home",
             ],
+            "swornMembers": Array [
+              "Jon Snow",
+            ],
             "titles": Array [
               "Lord of Heart's Home",
               "King of the Fingers (historical)",
@@ -42,21 +45,25 @@ ShallowWrapper {
 </h2>,
         <p />,
         <h3>
-          House Seats
-</h3>,
-        <h3>
-          <p>
+          House Seats: 
+          <span>
                     Heart's Home
-          </p>
+          </span>
 </h3>,
         <h3>
           House Titles
 </h3>,
-        <div>
-          <p>
+        <div
+          className="flex-data"
+>
+          <p
+                    className="flex-me"
+          >
                     Lord of Heart's Home
           </p>
-          <p>
+          <p
+                    className="flex-me"
+          >
                     King of the Fingers (historical)
           </p>
 </div>,
@@ -75,8 +82,10 @@ ShallowWrapper {
           </p>
 </div>,
         <h3 />,
+        false,
       ],
       "className": "card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -107,25 +116,18 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "House Seats",
-        },
-        "ref": null,
-        "rendered": "House Seats",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <p>
-              Heart's Home
-</p>,
+            "House Seats: ",
+            Array [
+              <span>
+                Heart's Home
+</span>,
+            ],
           ],
         },
         "ref": null,
         "rendered": Array [
+          "House Seats: ",
           Object {
             "instance": null,
             "key": "Heart's Home",
@@ -135,7 +137,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "Heart's Home",
-            "type": "p",
+            "type": "span",
           },
         ],
         "type": "h3",
@@ -157,13 +159,18 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p>
+            <p
+              className="flex-me"
+>
               Lord of Heart's Home
 </p>,
-            <p>
+            <p
+              className="flex-me"
+>
               King of the Fingers (historical)
 </p>,
           ],
+          "className": "flex-data",
         },
         "ref": null,
         "rendered": Array [
@@ -173,6 +180,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Lord of Heart's Home",
+              "className": "flex-me",
             },
             "ref": null,
             "rendered": "Lord of Heart's Home",
@@ -184,6 +192,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "King of the Fingers (historical)",
+              "className": "flex-me",
             },
             "ref": null,
             "rendered": "King of the Fingers (historical)",
@@ -263,6 +272,7 @@ ShallowWrapper {
         "rendered": null,
         "type": "h3",
       },
+      false,
     ],
     "type": "div",
   },
@@ -278,21 +288,25 @@ ShallowWrapper {
 </h2>,
           <p />,
           <h3>
-            House Seats
-</h3>,
-          <h3>
-            <p>
+            House Seats: 
+            <span>
                         Heart's Home
-            </p>
+            </span>
 </h3>,
           <h3>
             House Titles
 </h3>,
-          <div>
-            <p>
+          <div
+            className="flex-data"
+>
+            <p
+                        className="flex-me"
+            >
                         Lord of Heart's Home
             </p>
-            <p>
+            <p
+                        className="flex-me"
+            >
                         King of the Fingers (historical)
             </p>
 </div>,
@@ -311,8 +325,10 @@ ShallowWrapper {
             </p>
 </div>,
           <h3 />,
+          false,
         ],
         "className": "card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -343,25 +359,18 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "House Seats",
-          },
-          "ref": null,
-          "rendered": "House Seats",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <p>
-                Heart's Home
-</p>,
+              "House Seats: ",
+              Array [
+                <span>
+                  Heart's Home
+</span>,
+              ],
             ],
           },
           "ref": null,
           "rendered": Array [
+            "House Seats: ",
             Object {
               "instance": null,
               "key": "Heart's Home",
@@ -371,7 +380,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Heart's Home",
-              "type": "p",
+              "type": "span",
             },
           ],
           "type": "h3",
@@ -393,13 +402,18 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
+              <p
+                className="flex-me"
+>
                 Lord of Heart's Home
 </p>,
-              <p>
+              <p
+                className="flex-me"
+>
                 King of the Fingers (historical)
 </p>,
             ],
+            "className": "flex-data",
           },
           "ref": null,
           "rendered": Array [
@@ -409,6 +423,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Lord of Heart's Home",
+                "className": "flex-me",
               },
               "ref": null,
               "rendered": "Lord of Heart's Home",
@@ -420,6 +435,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "King of the Fingers (historical)",
+                "className": "flex-me",
               },
               "ref": null,
               "rendered": "King of the Fingers (historical)",
@@ -499,6 +515,7 @@ ShallowWrapper {
           "rendered": null,
           "type": "h3",
         },
+        false,
       ],
       "type": "div",
     },

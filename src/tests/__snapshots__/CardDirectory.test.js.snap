@@ -18,6 +18,9 @@ ShallowWrapper {
               "seats": Array [
                 "Heart's Home",
               ],
+              "swornMembers": Array [
+                "Jon Snow",
+              ],
               "titles": Array [
                 "Lord of Heart's Home",
                 "King of the Fingers (historical)",
@@ -33,6 +36,9 @@ ShallowWrapper {
               "name": "House Dayne of Starfall",
               "seats": Array [
                 "Starfall",
+              ],
+              "swornMembers": Array [
+                "Tyrion Lannister",
               ],
               "titles": Array [
                 "Lord of Starfall",
@@ -68,6 +74,9 @@ ShallowWrapper {
                               "seats": Array [
                                 "Heart's Home",
                               ],
+                              "swornMembers": Array [
+                                "Jon Snow",
+                              ],
                               "titles": Array [
                                 "Lord of Heart's Home",
                                 "King of the Fingers (historical)",
@@ -88,6 +97,9 @@ ShallowWrapper {
                               "seats": Array [
                                 "Starfall",
                               ],
+                              "swornMembers": Array [
+                                "Tyrion Lannister",
+                              ],
                               "titles": Array [
                                 "Lord of Starfall",
                                 "King of the Torrentine (historical)",
@@ -103,7 +115,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "house - 0",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "house": Object {
             "ancestralWeapons": Array [
@@ -115,6 +127,9 @@ ShallowWrapper {
             "name": "House Corbray of Heart's Home",
             "seats": Array [
               "Heart's Home",
+            ],
+            "swornMembers": Array [
+              "Jon Snow",
             ],
             "titles": Array [
               "Lord of Heart's Home",
@@ -129,7 +144,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "house - 1",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "house": Object {
             "ancestralWeapons": Array [
@@ -141,6 +156,9 @@ ShallowWrapper {
             "name": "House Dayne of Starfall",
             "seats": Array [
               "Starfall",
+            ],
+            "swornMembers": Array [
+              "Tyrion Lannister",
             ],
             "titles": Array [
               "Lord of Starfall",
@@ -175,6 +193,9 @@ ShallowWrapper {
                                     "seats": Array [
                                       "Heart's Home",
                                     ],
+                                    "swornMembers": Array [
+                                      "Jon Snow",
+                                    ],
                                     "titles": Array [
                                       "Lord of Heart's Home",
                                       "King of the Fingers (historical)",
@@ -195,6 +216,9 @@ ShallowWrapper {
                                     "seats": Array [
                                       "Starfall",
                                     ],
+                                    "swornMembers": Array [
+                                      "Tyrion Lannister",
+                                    ],
                                     "titles": Array [
                                       "Lord of Starfall",
                                       "King of the Torrentine (historical)",
@@ -210,7 +234,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "house - 0",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "house": Object {
               "ancestralWeapons": Array [
@@ -222,6 +246,9 @@ ShallowWrapper {
               "name": "House Corbray of Heart's Home",
               "seats": Array [
                 "Heart's Home",
+              ],
+              "swornMembers": Array [
+                "Jon Snow",
               ],
               "titles": Array [
                 "Lord of Heart's Home",
@@ -236,7 +263,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "house - 1",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "house": Object {
               "ancestralWeapons": Array [
@@ -248,6 +275,9 @@ ShallowWrapper {
               "name": "House Dayne of Starfall",
               "seats": Array [
                 "Starfall",
+              ],
+              "swornMembers": Array [
+                "Tyrion Lannister",
               ],
               "titles": Array [
                 "Lord of Starfall",

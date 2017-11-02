@@ -5,7 +5,8 @@ export const fetchHouseData = () => {
     fetch(`http://localhost:3001/api/v1/houses`)
       .then(res => res.json())
       .then(res => fetchSwornMembers(res))
-      .then(res => dispatch(fetchData(res)));
+      .then(res => dispatch(fetchData(res)))
+      .catch(error => alert(error));
   };
 };
 
@@ -30,7 +31,9 @@ const fetchSwornMembers = (dataToParse) => {
         }
       })
         .then(res => res.json())
-        .then(person => person.name);
+        .then(person => {
+            console.log(person);
+            return person.name});
     });
 
     return Promise.all(members).then( squad =>

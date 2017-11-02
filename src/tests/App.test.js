@@ -5,6 +5,7 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import housesMock from './mockData/housesMock';
+import personMock from './mockData/personMock';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -13,7 +14,6 @@ describe('App', () => {
   const initialState = {
     housesInTheGame: []
   };
-  // const mockFunc = jest.fn();
   const store = mockStore(initialState);
 
   beforeEach( () => {
@@ -22,6 +22,11 @@ describe('App', () => {
       body: housesMock
     });
   });
+
+    fetchMock.get(`http://localhost:3001/api/v1/character`, {
+      status: 200,
+      body: personMock
+    });
 
   it('should render component', () => {
     const wrapper = shallow( <App store={store} />);

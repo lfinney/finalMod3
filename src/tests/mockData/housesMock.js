@@ -5,7 +5,8 @@ export default [
     founded: "",
     name: "House Corbray of Heart's Home",
     seats: ["Heart's Home"],
-    titles: ["Lord of Heart's Home", "King of the Fingers (historical)"]
+    titles: ["Lord of Heart's Home", "King of the Fingers (historical)"],
+    swornMembers: ["Jon Snow"]
   },
   { ancestralWeapons: ["Dawn"],
     coatOfArms: "A white sword falling...",
@@ -13,6 +14,7 @@ export default [
     founded: "",
     name: "House Dayne of Starfall",
     seats: ["Starfall"],
-    titles: ["Lord of Starfall", "King of the Torrentine (historical)"]
+    titles: ["Lord of Starfall", "King of the Torrentine (historical)"],
+    swornMembers: ["Tyrion Lannister"]
   }
 ];
