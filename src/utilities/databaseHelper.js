@@ -31,9 +31,7 @@ const fetchSwornMembers = (dataToParse) => {
         }
       })
         .then(res => res.json())
-        .then(person => {
-            console.log(person);
-            return person.name});
+        .then(person => person.name);
     });
 
     return Promise.all(members).then( squad =>

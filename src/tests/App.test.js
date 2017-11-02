@@ -21,12 +21,11 @@ describe('App', () => {
       status: 200,
       body: housesMock
     });
-  });
-
     fetchMock.get(`http://localhost:3001/api/v1/character`, {
       status: 200,
       body: personMock
     });
+  });
 
   it('should render component', () => {
     const wrapper = shallow( <App store={store} />);

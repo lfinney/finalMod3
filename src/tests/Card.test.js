@@ -13,7 +13,6 @@ describe('Card', () => {
   });
 
   it('should render component', () => {
-    const mockFunc = jest.fn();
     const wrapper = mount(
       <Card house={housesMock[0]} />);
 
