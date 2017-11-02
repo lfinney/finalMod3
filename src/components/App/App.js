@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes, { shape, func, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { fetchHouseData } from '../../utilities/databaseHelper';
 import { connect } from 'react-redux';
-import CardDirectory from '../CardDirectory/CardDirectory'
+import CardDirectory from '../CardDirectory/CardDirectory';
 
 class App extends Component {
   componentDidMount() {
