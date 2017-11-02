@@ -4,7 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import { fetchHouseData } from '../../utilities/databaseHelper';
 import { connect } from 'react-redux';
+import CardDirectory from '../CardDirectory/CardDirectory'
+
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchData();
+  }
+
 
   render() {
     return (
@@ -12,17 +18,13 @@ class App extends Component {
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to Westeros</h2>
-          <button onClick={() => {
-            this.props.fetchData();
-            // alert(this.props.fake);
-          }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
-          { this.props.housesInTheGame ?
+          { this.props.housesInTheGame.length > 0 ?
             <CardDirectory />
             :
             <div className="loading">
-              <img alt="running dire wolf" src={ require('../../../wolf.gif')}/>
+              <img alt="running dire wolf" src={ require('../../assets/wolf.gif')}/>
             </div>
           }
         </div>
@@ -36,7 +38,7 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ store }) => ({
+const mapStateToProps = ( store ) => ({
   housesInTheGame: store.housesInTheGame
 });
 
