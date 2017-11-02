@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 
 const CardDirectory = ({ housesInTheGame }) => {
+  console.log(housesInTheGame);
   const houseInfo= housesInTheGame.map( (house, index) =>
     <Card
       house={house}
